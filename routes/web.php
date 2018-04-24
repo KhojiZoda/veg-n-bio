@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('front/application-front');
 });
+
+Route::get('/admin', function () {
+    return view('backoffice/application-back');
+});
