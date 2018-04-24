@@ -38,3 +38,4 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
   Route::get('/', 'AdminController@index')->name('adminHome');
 
 });
+
