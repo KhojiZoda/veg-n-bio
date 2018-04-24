@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Clever - Bootstrap 4 Admin Template">
-  <meta name="author" content="Łukasz Holeczek">
-  <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,jQuery,CSS,HTML,RWD,Dashboard,Vue,Vue.js,React,React.js">
-  <title>Admin Realm</title>
-  
+  <meta name="description" content="Vegan restaurant for school Project">
+  <meta name="author" content="Remi, Moun-Moun, Kojak">
+  <meta name="keyword" content="Vegan,restaurant,esgi">
+  <title>Admin</title>
+
   {!! Html::style('vendor/css/flag-icon.min.css') !!}
   {!! Html::style('vendor/css/font-awesome.min.css') !!}
   {!! Html::style('vendor/css/simple-line-icons.min.css') !!}
@@ -18,35 +18,6 @@
   {!! Html::style('vendor/css/toastr.min.css') !!}
 
 </head>
-
-<!-- BODY options, add following classes to body to change options
-
-// Header options
-1. '.header-fixed'					- Fixed Header
-
-// Brand options
-1. '.brand-minimized'       - Minimized brand (Only symbol)
-
-// Sidebar options
-1. '.sidebar-fixed'					- Fixed Sidebar
-2. '.sidebar-hidden'				- Hidden Sidebar
-3. '.sidebar-off-canvas'		- Off Canvas Sidebar
-4. '.sidebar-minimized'			- Minimized Sidebar (Only icons)
-5. '.sidebar-compact'			  - Compact Sidebar
-
-// Aside options
-1. '.aside-menu-fixed'			- Fixed Aside Menu
-2. '.aside-menu-hidden'			- Hidden Aside Menu
-3. '.aside-menu-off-canvas'	- Off Canvas Aside Menu
-
-// Breadcrumb options
-1. '.breadcrumb-fixed'			- Fixed Breadcrumb
-
-// Footer options
-1. '.footer-fixed'					- Fixed footer
-
--->
-
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
   <header class="app-header navbar">
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">
@@ -275,7 +246,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link nav-pill avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          {{ HTML::image('images/avatars/6.jpg', 'GALLERY') }}
+          {{ HTML::image('images/avatars/6.jpg', 'GALLERY', array('class' => 'img-avatar')) }}
           <span class="badge badge-pill badge-danger">9</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
