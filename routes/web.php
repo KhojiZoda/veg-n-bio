@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('front/application-front');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'admin\AdminController@index')->name('adminHome');
