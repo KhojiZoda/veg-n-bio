@@ -1,1 +1,1 @@
-<h1>{{ $user->first_name }}</h1>
+<a href="{{ url('/logout') }}" class="btn btn-success"> logout </a>

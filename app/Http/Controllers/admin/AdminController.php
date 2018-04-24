@@ -25,7 +25,12 @@ class AdminController extends Controller
    */
   public function index()
   {
-      $user = Auth::user();
-      return view('backoffice/application-back')->with('user', $user);
+    return view('backoffice/application-back');
   }
+  // public function logoutUser() {
+  //     //logout user
+  //     Auth::logout();
+  //     // redirect to homepage
+  //     return redirect('/');
+  // }
 }
