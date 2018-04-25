@@ -15,13 +15,11 @@ class AdminMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
-    {
-        if (Auth::user()->role == "admin")
-        {
-            return $next($request);
-        }
-
+    public function handle($request, Closure $next){
+      if (Auth::user() && Auth::user()->role == "admin"){
+          return $next($request);
+      }else{
         return redirect()->guest('/');
+      }
     }
 }
