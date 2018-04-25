@@ -11,6 +11,12 @@ use App\User;
 
 class UserController extends Controller{
 
+  public function index(){
+
+    $users = User::all();
+    return view('backoffice.user.index')->with('users', $users);
+  }
+
   public function show($user_id){
     $user_data = User::find($user_id);
     return view('backoffice.user.show')->with('user_data', $user_data);
@@ -18,7 +24,7 @@ class UserController extends Controller{
 
   public function edit($user_id){
       $user = User::find($user_id);
-      return view('user.edit', compact('user'));
+      return view('backoffice.user.edit')->with('user', $user);
   }
 
   public function update($user_id){
@@ -81,6 +87,25 @@ class UserController extends Controller{
           // redirect
           Session::flash('message', 'Successfully updated nerd!');
           return view('user.show', $user_id);
+    }
+  }
+
+  public function archive($user_id){
+    $user = User::find($user_id);
+    if ($user->status=="active") {
+      $user->status="archived";
+      if ($user->save()) {
+        $data = array(
+           'status' => 'success',
+           'msg' => 'Le salarié a été archivé',
+       );
+      }else {
+        $data = array(
+           'status' => 'error',
+           'msg' => "Une erreur s'est produite",
+        );
+      }
+      return response()->json($data);
     }
   }
 }

@@ -7,8 +7,9 @@
   <meta name="description" content="Vegan restaurant for school Project">
   <meta name="author" content="Remi, Moun-Moun, Kojak">
   <meta name="keyword" content="Vegan,restaurant,esgi">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Admin</title>
-
+  {!! Html::style('vendor/DataTables/datatables.min.css') !!}
   {!! Html::style('vendor/css/flag-icon.min.css') !!}
   {!! Html::style('vendor/css/font-awesome.min.css') !!}
   {!! Html::style('vendor/css/simple-line-icons.min.css') !!}
@@ -58,8 +59,8 @@
           <div class="dropdown-header text-center">
             <strong>Account</strong>
           </div>
-          <a class="dropdown-item" href="admin/users/{{$user_data->id}}"><i class="fa fa-user"></i> Profile<span class="badge badge-info">42</span></a>
-          <a class="dropdown-item" href="#"><i class="fa fa-pencil"></i> Edit Profile<span class="badge badge-success">42</span></a>
+          <a class="dropdown-item" href="admin/users/{{ Auth::user()->id }}"><i class="fa fa-user"></i> Profile<span class="badge badge-info">42</span></a>
+          <a class="dropdown-item" href="admin/users/{{ Auth::user()->id }}/edit"><i class="fa fa-pencil"></i> Edit Profile<span class="badge badge-success">42</span></a>
           <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out"></i> Logout<span class="badge badge-warning">42</span></a>
         </div>
       </li>
