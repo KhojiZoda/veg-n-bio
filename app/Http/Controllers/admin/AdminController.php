@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
+
 class AdminController extends Controller
 {
   /**
@@ -13,8 +14,7 @@ class AdminController extends Controller
    *
    * @return void
    */
-  public function __construct()
-  {
+  public function __construct(){
       $this->middleware('auth');
   }
 
@@ -23,14 +23,8 @@ class AdminController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
-  {
-    return view('backoffice/application-back');
+  public function index(){
+    $current_user = Auth::user();
+    return view('backoffice/layout/application-back')->with('user_data', $current_user);
   }
-  // public function logoutUser() {
-  //     //logout user
-  //     Auth::logout();
-  //     // redirect to homepage
-  //     return redirect('/');
-  // }
 }

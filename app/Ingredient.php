@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Ingridient extends Model
+class Ingredient extends Model
 {
     public function meals(){
       return $this -> hasMany('App\Meal');

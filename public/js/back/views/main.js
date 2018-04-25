@@ -1,11 +1,6 @@
 $(function(){
   'use strict';
 
-  toastr.info('Bootstrap 4 on steroids', 'Welcome to Clever Admin', {
-    closeButton: true,
-    progressBar: true,
-  });
-
   $('input[name="daterange"]').daterangepicker({
     opens: 'left',
     ranges: {

@@ -10,8 +10,8 @@ class Meal extends Model
       return $this -> hasMany('App\Order');
     }
 
-    public function ingridients(){
-      return $this -> hasMany('App\Ingridient');
+    public function ingredients(){
+      return $this -> hasMany('App\Ingredient');
     }
 
     public function menus(){
