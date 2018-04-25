@@ -1,0 +1,68 @@
+<?php
+
+namespace App\Http\Controllers\admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use App\Restaurant;
+
+
+class RestaurantController extends Controller{
+
+  public function show($restaurant_id){
+    $user_data = Restaurant::find($restaurant_id);
+    return view('')->with('restaurant_data', $restaurant_data);
+  }
+
+  public function edit($restaurant_id){
+      $restaurant = Restaurant::find($user_id);
+      return view('restaurant.edit', compact('restaurant'));
+  }
+
+  public function update($user_id){
+      // $restaurant = Restaurant::find($user_id);
+      // $restaurant->validate(request(), [
+      //   'first_name' => 'required|string|max:255',
+      //   'last_name' => 'required|string|max:255',
+      //   'email' => 'required|string|email|max:255|unique:users',
+      //   'password' => 'required|string|min:6|confirmed',
+      //   'birthday' => 'required|date',
+      //   'gender' => 'required|string',
+      //   'address' => 'required|string|max:255',
+      //   'role' => 'required|string|max:255',
+      // ]);
+      //
+      // $restaurant->name = request('name');
+      // $restaurant->address = request('address');
+      //
+      // $restaurant->save();
+      //
+      // return back();
+
+      $rules = array(
+        'name' => 'required|string|max:255',
+        'address' => 'required|string|max:255'
+      );
+      $validator = Validator::make(Input::all(), $rules);
+
+      // process the login
+      if ($validator->fails()) {
+          return Redirect::to('admin/restaurant/' . $restaurant_id . '/edit')
+              ->withErrors($validator)
+              ->withInput(Input::except('password'));
+      } else {
+          // store
+          $restaurant = Restaurant::find($id);
+          $restaurant->name   = Input::get('name');
+          $restaurant->address    = Input::get('address');
+
+          $restaurant->save();
+
+          // redirect
+          Session::flash('message', 'Successfully updated nerd!');
+          return view('restaurant.show', $restaurant_id);
+    }
+  }
+}
