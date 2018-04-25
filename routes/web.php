@@ -35,7 +35,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
 
-  Route::get('/', 'AdminController@index')->name('adminHome');
+  Route::get('/', 'AdminController@index')->name('admin.home');
+
+  Route::get('users/{user}', 'UserController@show')->name("user.show");
+  Route::get('users/{user}/edit', 'UserController@edit')->name("user.edit");
+  Route::patch('users/{user}/update', 'UserController@update')->name('user.update');
 
 });
-

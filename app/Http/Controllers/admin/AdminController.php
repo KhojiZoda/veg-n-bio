@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
+
 class AdminController extends Controller
 {
   /**
@@ -25,12 +26,7 @@ class AdminController extends Controller
    */
   public function index()
   {
-    return view('backoffice/application-back');
+    $current_user = Auth::user();
+    return view('backoffice/layout/application-back')->with('user', $current_user);
   }
-  // public function logoutUser() {
-  //     //logout user
-  //     Auth::logout();
-  //     // redirect to homepage
-  //     return redirect('/');
-  // }
 }
