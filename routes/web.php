@@ -37,8 +37,10 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
 
   Route::get('/', 'AdminController@index')->name('admin.home');
 
-  Route::get('users/{user}', 'UserController@show')->name("user.show");
-  Route::get('users/{user}/edit', 'UserController@edit')->name("user.edit");
-  Route::patch('users/{user}/update', 'UserController@update')->name('user.update');
+  Route::get('users/', 'UserController@index')->name("users.index");
+  Route::get('users/{user}', 'UserController@show')->name("users.show");
+  Route::get('users/{user}/edit', 'UserController@edit')->name("users.edit");
+  Route::patch('users/{user}/update', 'UserController@update')->name('users.update');
+  Route::post('users/{user}/archive', 'UserController@archive')->name('users.archive');
 
 });

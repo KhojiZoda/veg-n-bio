@@ -25,6 +25,12 @@
             <dd class="col-md-6">{{$user_data->birthday}}</dd>
           </dl>
         </div>
+        <div class="card-footer">
+          <a href="/admin/users/{{$user_data->id}}/edit" class="btn btn-outline-success text-right">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            Modifier
+          </a>
+        </div>
       </div>
     </div>
   </div>
