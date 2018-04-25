@@ -12,8 +12,8 @@ use App\User;
 class UserController extends Controller{
 
   public function show($user_id){
-    $user = User::find($user_id);
-    return view('backoffice.user.show')->with('user_data', $user);
+    $user_data = User::find($user_id);
+    return view('backoffice.user.show')->with('user_data', $user_data);
   }
 
   public function edit($user_id){

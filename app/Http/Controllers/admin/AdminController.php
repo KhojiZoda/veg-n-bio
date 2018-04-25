@@ -27,6 +27,6 @@ class AdminController extends Controller
   public function index()
   {
     $current_user = Auth::user();
-    return view('backoffice/layout/application-back')->with('user', $current_user);
+    return view('backoffice/layout/application-back')->with('user_data', $current_user);
   }
 }
