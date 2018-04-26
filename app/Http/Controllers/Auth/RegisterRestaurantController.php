@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Restaurant;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -55,14 +55,14 @@ class RegisterController extends Controller
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Create a new restaurant instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Restaurant
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Restaurant::create([
             'name' => $data['name'],
             'address' => $data['address']
       ]);
