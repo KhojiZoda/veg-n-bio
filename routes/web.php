@@ -43,4 +43,10 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
   Route::patch('users/{user}/update', 'UserController@update')->name('users.update');
   Route::post('users/{user}/archive', 'UserController@archive')->name('users.archive');
 
+  Route::get('orders/', 'OrderController@index')->name("orders.index");
+  Route::get('orders/{order}', 'OrderController@show')->name("orders.show");
+  Route::get('orders/{order}/edit', 'OrderController@edit')->name("orders.edit");
+  Route::patch('orders/{order}/update', 'OrderController@update')->name('orders.update');
+
+
 });

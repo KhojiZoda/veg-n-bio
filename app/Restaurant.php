@@ -10,6 +10,10 @@ class Restaurant extends Model
       return $this->hasMany('App\User');
     }
 
+    public function menu(){
+      return $this->hasOne('App\Menu');
+    }
+
     protected $fillable = [
         'name', 'address'
     ];
