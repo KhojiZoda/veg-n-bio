@@ -94,6 +94,7 @@ class UserController extends Controller{
     $user = User::find($user_id);
     if ($user->status=="active") {
       $user->status="archived";
+      $user->password="";
       if ($user->save()) {
         $data = array(
            'status' => 'success',

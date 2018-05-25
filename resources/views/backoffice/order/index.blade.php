@@ -14,6 +14,7 @@
                     <th>#</th>
                     <th>Date de commande</th>
                     <th>Serveur</th>
+                    <th>Client</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -22,7 +23,8 @@
                   <tr>
                     <td>{{$value->id}}</td>
                     <td>{{$value->date_order}}</td>
-                    <td>{{$value->waiter->first_name}}</td>
+                    <td>{{$value->waiter->first_name.' '.$value->waiter->last_name}}</td>
+                    <td>{{$value->client->first_name.' '.$value->client->last_name}}</td>
                     <td>
                       <a href="/admin/order/{{$value->id}}" class="btn btn-outline-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
                       <a href="/admin/order/{{$value->id}}/edit" class="btn btn-outline-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
