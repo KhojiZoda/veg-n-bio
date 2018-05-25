@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+
 use App\Order;
 use App\User;
 use App\Meal;
-
 class OrderController extends Controller
 {
   public function __construct(){
@@ -31,30 +33,36 @@ class OrderController extends Controller
    * @param  array  $data
    * @return \App\Order
    */
-  protected function create(array $data)
+  protected function create()
   {
-      return Order::create(
-        [
-          'date_order' => $data['date_order'],
-          'client_id' => $data['client_id'],
-          'waiter_id' => $data['waiter_id']
-        ]
-      );
-      foreach ($data["order_lines"] as $order_lines){
-        return OrderLines::create(
-          [
-            'order_id' => $data['id'],
-            'meal_id' => $order_lines["meal_id"]
-          ]
-        );
-      }
+    $rules = array(
+        'client_id'       => 'required',
+        'waiter_id'       => 'required',
+        'date_order'      => 'required'
+    );
+    $validator = Validator::make(Input::all(), $rules);
+
+    // process the login
+    if ($validator->fails()) {
+      return Redirect::to('admin/orders/new')
+          ->withErrors($validator);
+    } else {
+      // store
+      $order = new Order;
+      $order->client_id     = Input::get('client_id');
+      $order->waiter_id     = Input::get('waiter_id');
+      $order->date_order    = Input::get('date_order');
+      $order->save();
+
+      // redirect
+      return redirect()->route('orderLines.new', $order->id)->with('order_id', $order);
+    }
 
   }
 
   public function new(){
-    $meals = Meal::all();
     $users = User::where('role', 'admin')->orWhere('role', 'waiter')->get();
-    return view('backoffice.order.new', compact('meals', 'users'));
+    return view('backoffice.order.new', compact('users'));
   }
 
   public function index(){

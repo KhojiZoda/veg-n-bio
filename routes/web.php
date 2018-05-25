@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('front/application-front');
 });
@@ -49,6 +48,10 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
   Route::get('orders/{order}/edit', 'OrderController@edit')->name("orders.edit");
   Route::post('orders/create', 'OrderController@create')->name("orders.create");
   Route::patch('orders/{order}/update', 'OrderController@update')->name('orders.update');
+
+  Route::get('orderLines/', 'OrderLinesController@index')->name("orderLines.index");
+  Route::get('/order/{order}/orderLines/new', 'OrderLinesController@new')->name('orderLines.new');
+  Route::post('orderLines/create', 'OrderLinesController@create')->name("orderLines.create");
 
 
 });
