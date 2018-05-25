@@ -50,7 +50,7 @@ class OrderLinesController extends Controller
       $orderLines->save();
 
       // redirect
-      return redirect()->route('orderLines.new', Input::get('order_id'))->with('order_id', Input::get('order_id'));
+      return redirect()->route('orderLines.new', Input::get('order_id'))->with('order_id', Input::get('order_id'))->with('success', "La ligne de commande a été créée");
     }
   }
 

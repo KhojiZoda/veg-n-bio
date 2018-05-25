@@ -11,6 +11,12 @@
           <!-- if there are creation errors, they will show here -->
           {{ Html::ul($errors->all()) }}
 
+          @if(session()->has('success'))
+              <div class="alert alert-success">
+                  {{ session()->get('success') }}
+              </div>
+          @endif
+
           {{ Form::open(array('route' => array('orderLines.create'))) }}
               <div id="order_lines_row">
                 <div class="order_lines">
