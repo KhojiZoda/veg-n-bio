@@ -33,10 +33,10 @@
         <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Restaurants</a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <a class="nav-link" href="/admin/restaurants/new"><i class="icon-puzzle"></i> Ajouter un restaurant</a>
+            <a class="nav-link" href="/admin/restaurant/new"><i class="icon-puzzle"></i> Ajouter un restaurant</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/admin/restaurants"><i class="icon-puzzle"></i> Liste des restaurants</a>
+            <a class="nav-link" href="/admin/restaurant"><i class="icon-puzzle"></i> Liste des restaurants</a>
           </li>
         </ul>
       </li>
@@ -44,10 +44,10 @@
         <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Menus</a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <a class="nav-link" href="/admin/menus/new"><i class="icon-puzzle"></i> Composer un menu</a>
+            <a class="nav-link" href="/admin/menu/new"><i class="icon-puzzle"></i> Composer un menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/admin/menus"><i class="icon-puzzle"></i> Liste des menus</a>
+            <a class="nav-link" href="/admin/menu"><i class="icon-puzzle"></i> Liste des menus</a>
           </li>
         </ul>
       </li>

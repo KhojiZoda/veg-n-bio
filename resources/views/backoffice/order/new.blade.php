@@ -20,8 +20,6 @@
 
               <div class="form-group">
                   {{ Form::label('client_id', 'Client') }}
-                  {{-- {!! Form::select('client_id', $users, null, array('class' => 'form-control')) !!} --}}
-
                   <select name="client_id">
                     @foreach ($users as $client)
                       <option value="{{$client->id}}">{{$client->first_name}}</option>
