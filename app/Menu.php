@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-  public function meals(){
-    return $this->hasMany('App\Meal');
+  public function menuLines(){
+    return $this->hasMany('App\MenuLines');
   }
 }

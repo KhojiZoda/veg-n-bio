@@ -21,9 +21,9 @@ class OrderController extends Controller
   protected function validator(array $data)
   {
       return Validator::make($data, [
-          'date_order' => 'required|date|',
-          'client_id' => 'integer',
-          'waiter_id' => 'required|integer'
+          'date_order'  => 'required|date|',
+          'client_id'   => 'integer',
+          'waiter_id'   => 'required|integer'
       ]);
   }
 

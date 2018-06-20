@@ -24,8 +24,8 @@
                     <td>{{$value->name}}</td>
                     <td>{{$value->dishes}}</td>
                     <td>
-                      <a href="/admin/order/{{$value->id}}" class="btn btn-outline-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                      <a href="/admin/order/{{$value->id}}/edit" class="btn btn-outline-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                      <a href="/admin/menu/{{$value->id}}" class="btn btn-outline-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                      <a href="/admin/menu/{{$value->id}}/edit" class="btn btn-outline-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                     </td>
                   </tr>
                 @endforeach

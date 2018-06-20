@@ -72,4 +72,10 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
   Route::get('menuLines/',                        'MenuLinesController@index')    ->name("menuLines.index");
   Route::get('/menu/{menu}/menuLines/new',        'MenuLinesController@new')      ->name('menuLines.new');
   Route::post('menuLines/create',                 'MenuLinesController@create')   ->name("menuLines.create");
+  Route::post('menuLines/{menuLine_id}/delete',   'MenuLinesController@delete')   ->name("menuLines.delete");
+
+  Route::post('menu/{menu_id}/menuLines/{menuLine_id}/meal/{meal_id}/addMeal', 'MenuLinesController@addMeal') ->name("menuLines.addMeal");
+
+
+  Route::get('datatables/getMenuMeals/{menu_id}', 'DataLoadingsController@getMenuMeals')  ->name("dataLoadings.menuMeals");
 });

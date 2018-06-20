@@ -17,7 +17,7 @@
   {!! Html::script('vendor/js/bootstrap.min.js') !!}
   {!! Html::script('vendor/js/pace.min.js') !!}
   {!! Html::script('vendor/DataTables/datatables.min.js') !!}
-  {!! Html::script('vendor/js/Chart.min.js') !!}
+  {{-- {!! Html::script('vendor/js/Chart.min.js') !!} --}}
   {!! Html::script('js/back/app.js') !!}
   {!! Html::script('vendor/js/toastr.min.js') !!}
   {!! Html::script('vendor/js/gauge.min.js') !!}
@@ -25,6 +25,7 @@
   {!! Html::script('vendor/js/daterangepicker.min.js') !!}
   {!! Html::script('js/back/views/main.js') !!}
   {!! Html::script('ajax/admin.js') !!}
+  {!! Html::script('ajax/datatables.js') !!}
 
   </body>
 </html>

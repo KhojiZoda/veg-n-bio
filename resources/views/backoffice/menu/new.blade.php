@@ -13,10 +13,7 @@
 
           {{ Form::open(array('route' => 'menu.create')) }}
 
-              <div class="form-group">
-                  {{ Form::label('name', 'Nom') }}
-                  {{ Form::text('name', Input::old('name'), array('class' => 'form-control')) }}
-              </div>
+              @include('backoffice.menu.form')
 
               {{ Form::submit('Soumettre', array('class' => 'btn btn-outline-primary')) }}
 

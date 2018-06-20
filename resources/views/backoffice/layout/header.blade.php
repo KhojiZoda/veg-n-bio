@@ -14,6 +14,7 @@
   {!! Html::style('vendor/css/font-awesome.min.css') !!}
   {!! Html::style('vendor/css/simple-line-icons.min.css') !!}
   {!! Html::style('css/style.css') !!}
+  {!! Html::style('css/shared.css') !!}
   {!! Html::style('vendor/css/daterangepicker.min.css') !!}
   {!! Html::style('vendor/css/gauge.min.css') !!}
   {!! Html::style('vendor/css/toastr.min.css') !!}

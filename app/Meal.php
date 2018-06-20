@@ -10,7 +10,7 @@ class Meal extends Model
       return $this -> hasMany('App\Ingredient');
     }
 
-    public function menu(){
-      return $this -> belongsToMany('App\Menu');
+    public function menuLines(){
+      return $this -> belongsTo('App\MenuLines');
     }
 }
