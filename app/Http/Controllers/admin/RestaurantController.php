@@ -102,5 +102,4 @@ class RestaurantController extends Controller
     }
 
   }
-
 }
