@@ -8,12 +8,28 @@
           Menu: {{ $menu->name }}
         </div>
         <div class="card-body">
-          <dl class="row">
-            @foreach ($menu->menuLines as $meal)
-              <dt class="col-md-6">{{$meal->meal->type}}</dt>
-              <dd class="col-md-6">{{$meal->meal->name}}</dd>
-            @endforeach
-          </dl>
+          <table id="menuMealsShow" class="table table-striped table-bordered" width="100%" data-page-length="25">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+              <tr>
+                  <th>#</th>
+                  <th>Type</th>
+                  <th></th>
+              </tr>
+          </tfoot>
+          </table>
+          <div class="unabled">
+            {{ Form::label('menu_id', '') }}
+            {{ Form::text('menu_id', $menu->id, array('class' => 'form-control', 'readonly' => 'true', "id" => "menu_show_id")) }}
+          </div>
         </div>
       </div>
     </div>
