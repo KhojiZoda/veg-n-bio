@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Allergen extends Model
 {
-    public function ingredient(){
-      return $this -> belongsTo('App\Ingredient');
+    public function ingredients(){
+      return $this -> belongsToMany('App\Ingredient');
     }
 }
