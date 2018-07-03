@@ -25,7 +25,7 @@ $(document).ready(function(){
       "initComplete": function(){
         $('#menuMeals tfoot th').each( function () {
           var title = $(this).text();
-          $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+          $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
         });
 
         // DataTable
@@ -75,7 +75,7 @@ $(document).ready(function(){
       "initComplete": function(){
         $('#menuMealsShow tfoot th').each( function () {
           var title = $(this).text();
-          $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+          $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
         });
 
         // DataTable
@@ -124,7 +124,7 @@ $(document).ready(function(){
     "initComplete": function(){
       $('#users_table_id tfoot th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+        $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
       });
 
       // DataTable
@@ -146,7 +146,7 @@ $(document).ready(function(){
 
 
 
-// User Index
+// Provider Index
 
 $(document).ready(function(){
   $("table#provider_table_id").dataTable({
@@ -173,11 +173,56 @@ $(document).ready(function(){
     "initComplete": function(){
       $('#provider_table_id tfoot th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+        $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
       });
 
       // DataTable
       var table = $('#provider_table_id').DataTable();
+
+      // Apply the search
+      table.columns().every( function () {
+        var that = this;
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+          if ( that.search() !== this.value ) {
+            that.search( this.value ).draw();
+          }
+        });
+      });
+    }
+  });
+});
+
+$(document).ready(function(){
+  $("table#ingredient_index_tab").dataTable({
+    "language": {
+      "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/French.json"
+    },
+    "ajax": {
+      "url": "/admin/datatables/getIngredients",
+      "type": "GET"
+    },
+    "columns": [
+      { "data": "name" },
+      { "data": "price" },
+      { "data": "quantity" },
+      { "data": "buy_counter" },
+      {
+        "data": "id",
+        "searchable": false,
+        "orderable": false,
+        "render": function(data, type, row) {
+          return "<a href='/admin/buyhistory/new/ingredient/"+ data +"' class='btn btn-outline-primary'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>"
+        }
+      }
+    ],
+    "initComplete": function(){
+      $('#ingredient_index_tab tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
+      });
+
+      // DataTable
+      var table = $('#ingredient_index_tab').DataTable();
 
       // Apply the search
       table.columns().every( function () {

@@ -80,6 +80,11 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
   Route::patch('meal/{meal_id}/update',           'MealController@update')        ->name('meal.update');
   Route::get('meal/{meal_id}',                    'MealController@show')          ->name('meal.show');
 
+  Route::get('buyhistory',                                                    'BuyHistoryController@index')             ->name('history.index');
+  Route::get('buyhistory/new/ingredient/{ingredient_id}',                     'BuyHistoryController@new')               ->name('history.new');
+  Route::post('buyhistory/create/ingredient/{ingredient_id}',                 'BuyHistoryController@create')            ->name('history.create');
+  Route::get('buyhistory/{buyhistory_id}',                                    'BuyHistoryController@show')              ->name('history.show');
+
   Route::get('marketplace',                       'MarketplaceController@index')  ->name('marketplace.index');
 
 
@@ -90,5 +95,6 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
 
   Route::get('datatables/getUsers', 'DataLoadingsController@getUsers')   ->name("dataLoadings.users");
   Route::get('datatables/getProviders', 'DataLoadingsController@getProviders')   ->name("dataLoadings.providers");
+  Route::get('datatables/getIngredients', 'DataLoadingsController@getIngredients') ->name('dataLoadings.ingredients');
 
 });

@@ -10,6 +10,7 @@ use App\User;
 use App\Menu;
 use App\MenuLines;
 use App\Meal;
+use App\Ingredient;
 
 
 class DataLoadingsController extends Controller
@@ -32,5 +33,10 @@ class DataLoadingsController extends Controller
   public function getProviders(){
     $providers = User::all()->where('role', 'provider')->values();
     return response()->json(['data' => $providers]);
+  }
+
+  public function getIngredients(){
+    $ingredients = Ingredient::all()->values();
+    return response()->json(['data' => $ingredients]);
   }
 }
