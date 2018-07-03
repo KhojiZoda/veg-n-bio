@@ -77,7 +77,7 @@ function addToMenuMeal(menuId, menuLineId, mealId){
 function showPrice(price,quantity){
   var wanted_quantity = $('#desired_quantity')[0].value;
   var cal_price = $('#cal_price')[0];
-  cal_price.value = (wanted_quantity*price)/quantity;
+  cal_price.value = wanted_quantity*price;
   console.log(cal_price);
   if (wanted_quantity>quantity) {
     $('#get_ingredient').fadeOut();

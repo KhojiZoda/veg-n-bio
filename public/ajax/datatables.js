@@ -211,7 +211,7 @@ $(document).ready(function(){
         "searchable": false,
         "orderable": false,
         "render": function(data, type, row) {
-          return "<a href='/admin/buyhistory/new/ingredient/"+ data +"' class='btn btn-outline-primary'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>"
+          return "<a href='/admin/buyhistory/new/ingredient/"+ data +"' class='btn btn-outline-success'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>"
         }
       }
     ],
@@ -235,4 +235,106 @@ $(document).ready(function(){
       });
     }
   });
+});
+
+
+$(document).ready(function(){
+  $("table#history_index_tab").dataTable({
+    "language": {
+      "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/French.json"
+    },
+    "ajax": {
+      "url": "/admin/datatables/getHistory",
+      "type": "GET"
+    },
+    "columns": [
+      { "data": "ingredient.name" },
+      { "data": "price" },
+      { "data": "quantity" },
+      { "data": "created_at" },
+      {
+        "data": "ingredient",
+        "render": function(data, type, row) {
+          return data.user.first_name + " " + data.user.last_name;
+        }
+      },
+      {
+        "data": "id",
+        "searchable": false,
+        "orderable": false,
+        "render": function(data, type, row) {
+          return "<a href='/admin/buyhistory/"+ data +"' class='btn btn-outline-primary'><i class='fa fa-eye' aria-hidden='true'></i></a>"
+        }
+      }
+    ],
+    "initComplete": function(){
+      $('#history_index_tab tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
+      });
+
+      // DataTable
+      var table = $('#history_index_tab').DataTable();
+
+      // Apply the search
+      table.columns().every( function () {
+        var that = this;
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+          if ( that.search() !== this.value ) {
+            that.search( this.value ).draw();
+          }
+        });
+      });
+    }
+  });
+});
+
+
+$(document).ready(function(){
+  var provider_id = $('#current_provider_id');
+  if (provider_id != undefined){
+    $('#minimizer').click();
+    $("table#provider_ingredients_index_tab").dataTable({
+      "language": {
+        "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/French.json"
+      },
+      "ajax": {
+        "url": "/provider/providerIngredients/" + provider_id[0].value,
+        "type": "GET"
+      },
+      "columns": [
+        { "data": "name" },
+        { "data": "price" },
+        { "data": "quantity" },
+        { "data": "buy_counter" },
+        {
+          "data": "id",
+          "searchable": false,
+          "orderable": false,
+          "render": function(data, type, row) {
+            return "<a href='/provider/"+ data +"' class='btn btn-outline-success'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>"
+          }
+        }
+      ],
+      "initComplete": function(){
+        $('#provider_ingredients_index_tab tfoot th').each( function () {
+          var title = $(this).text();
+          $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
+        });
+
+        // DataTable
+        var table = $('#provider_ingredients_index_tab').DataTable();
+
+        // Apply the search
+        table.columns().every( function () {
+          var that = this;
+          $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+              that.search( this.value ).draw();
+            }
+          });
+        });
+      }
+    });
+  }
 });

@@ -26,8 +26,4 @@ class IngredientsController extends Controller
           'quantity'=> 'required'
       ]);
   }
-
-  public function buy($ingredient_id){
-
-  }
 }

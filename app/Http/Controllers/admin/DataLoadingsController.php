@@ -11,6 +11,7 @@ use App\Menu;
 use App\MenuLines;
 use App\Meal;
 use App\Ingredient;
+use App\BuyHistory;
 
 
 class DataLoadingsController extends Controller
@@ -38,5 +39,10 @@ class DataLoadingsController extends Controller
   public function getIngredients(){
     $ingredients = Ingredient::all()->values();
     return response()->json(['data' => $ingredients]);
+  }
+
+  public function getHistory(){
+    $history = BuyHistory::with('ingredient.user')->get();
+    return response()->json(['data' => $history]);
   }
 }

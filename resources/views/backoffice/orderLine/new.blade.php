@@ -21,11 +21,11 @@
               <div id="order_lines_row">
                 <div class="order_lines">
                   <div class="form-group">
-                    {{ Form::label('order_id', '') }}
-                    {{ Form::text('order_id', $order_id, array('class' => 'form-control', 'readonly' => 'true')) }}
+                    {{ Form::label('order_id', '', array('class' => 'order_id')) }}
+                    {{ Form::text('order_id', $order_id, array('class' => 'form-control order_id', 'readonly' => 'true')) }}
 
                     {{ Form::label('order_lines', '') }}
-                    <select name="order_lines">
+                    <select name="order_lines" class="form-control">
                       @foreach ($meals as $meal)
                         <option value="{{$meal->id}}">{{$meal->name}}</option>
                       @endforeach

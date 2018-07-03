@@ -66,7 +66,7 @@
                                 @endif
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -93,7 +93,10 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Sexe') }}</label>
 
                             <div class="col-md-6">
+                                {{ Form::label('gender', 'Homme') }}
                                 {{ Form::radio('gender', "Homme", $errors->has('gender') ? ['class' => "form-control is-invalid"] : ['class' => "form-control"]) }}
+
+                                {{ Form::label('gender', 'Femme') }}
                                 {{ Form::radio('gender', "Femme", $errors->has('gender') ? ['class' => "form-control is-invalid"] : ['class' => "form-control"]) }}
                                 @if ($errors->has('gender'))
                                     <span class="invalid-feedback">

@@ -56,7 +56,7 @@ class BuyHistoryController extends Controller
         $quantity = $ingredient->quantity;
 
         $ingredient->quantity = $quantity - $history->quantity;
-
+        $ingredient->buy_counter +=1;
         $ingredient->save();
         $history->save();
 

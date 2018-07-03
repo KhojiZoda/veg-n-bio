@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Redirect;
 
 use App\User;
 use App\Ingredient;
+use App\BuyHistory;
+
 
 class MarketplaceController extends Controller
 {
@@ -21,6 +23,8 @@ class MarketplaceController extends Controller
   public function index(){
     $nb_visitors = User::all()->where('role', 'provider')->count();
     $nb_ingredients = Ingredient::all()->count();
-    return view('backoffice.marketplace.index', compact('nb_visitors', 'nb_ingredients'));
+    $history_count = BuyHistory::all()->count();
+    $ingredients = Ingredient::all();
+    return view('backoffice.marketplace.index', compact('nb_visitors', 'nb_ingredients', 'history_count', 'ingredients'));
   }
 }

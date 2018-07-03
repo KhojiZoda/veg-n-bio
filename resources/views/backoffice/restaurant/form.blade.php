@@ -9,14 +9,9 @@
 
 <div class="form-group">
     {{ Form::label('menu_id', 'Menu') }}
-    {{ Form::number('menu_id', Input::old('menu_id'), array('class' => 'form-control')) }}
-</div>
-
-{{-- <div class="form-group">
-    {{ Form::label('menu_id', 'Menu') }}
-    <select name="menu_id">
+    <select name="menu_id" class="form-control">
       @foreach ($menus as $menu)
         <option value="{{$menu->id}}">{{$menu->name}}</option>
       @endforeach
     </select>
-</div> --}}
+</div>

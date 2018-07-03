@@ -92,9 +92,16 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
 
 
   Route::get('datatables/getMenuMeals/{menu_id}', 'DataLoadingsController@getMenuMeals')  ->name("dataLoadings.menuMeals");
-
   Route::get('datatables/getUsers', 'DataLoadingsController@getUsers')   ->name("dataLoadings.users");
   Route::get('datatables/getProviders', 'DataLoadingsController@getProviders')   ->name("dataLoadings.providers");
   Route::get('datatables/getIngredients', 'DataLoadingsController@getIngredients') ->name('dataLoadings.ingredients');
+  Route::get('datatables/getHistory', 'DataLoadingsController@getHistory') ->name('dataLoadings.history');
 
 });
+
+Route::get('provider/{provider_id}', 'ProviderController@show') ->name('provider.show');
+Route::get('provider/{provider_id}/ingredient/new', 'ProviderController@new') ->name('provider.new');
+Route::post('provider/{provider_id}/ingredient/create', 'ProviderController@create') ->name('provider.create');
+Route::patch('provider/{provider_id}/ingredient/{ingredient_id}/update', 'ProviderController@update') ->name('provider.update');
+Route::get('provider/{provider_id}/ingredient/{ingredient_id}/edit', 'ProviderController@edit') ->name('provider.edit');
+Route::get('provider/providerIngredients/{provider_id}', 'ProviderController@providerIngredients')  ->name("provider.providerIngredients");

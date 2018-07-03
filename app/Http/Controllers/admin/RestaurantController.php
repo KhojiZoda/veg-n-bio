@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Restaurant;
+use App\Menu;
 class RestaurantController extends Controller
 {
   /**
@@ -58,12 +59,14 @@ class RestaurantController extends Controller
   }
 
   public function new(){
-    return view('backoffice.restaurant.new');
+    $menus = Menu::all();
+    return view('backoffice.restaurant.new')->with('menus', $menus);
   }
 
   public function show($restaurant_id){
     $restaurant = Restaurant::find($restaurant_id);
-    return view('backoffice.restaurant.show')->with('restaurant', $restaurant);
+    $menu = Menu::find($restaurant->menu_id);
+    return view('backoffice.restaurant.show')->with('restaurant', $restaurant)->with('menu', $menu);
   }
 
   public function index(){
