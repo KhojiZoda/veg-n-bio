@@ -28,4 +28,9 @@ class DataLoadingsController extends Controller
     $users = User::all()->where('role', 'admin');
     return response()->json(['data' => $users]);
   }
+
+  public function getProviders(){
+    $providers = User::all()->where('role', 'provider')->values();
+    return response()->json(['data' => $providers]);
+  }
 }

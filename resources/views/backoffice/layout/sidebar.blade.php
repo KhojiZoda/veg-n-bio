@@ -74,15 +74,7 @@
         </ul>
       </li>
       <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Stocks</a>
-        <ul class="nav-dropdown-items">
-          <li class="nav-item">
-            <a class="nav-link" href="/admin/stocks/new"><i class="icon-puzzle"></i> Ajouter dans un stock</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/admin/stocks"><i class="icon-puzzle"></i> Liste des stocks</a>
-          </li>
-        </ul>
+        <a class="nav-link" href="/admin/marketplace"><i class="icon-puzzle"></i> Place de marché</a>
       </li>
     </ul>
   </nav>

@@ -15,4 +15,7 @@ class Ingredient extends Model
     public function allergen(){
       return $this -> belongsTo('App\Allergen');
     }
+    public function user(){
+      return $this -> belongsTo('App\User');
+    }
 }

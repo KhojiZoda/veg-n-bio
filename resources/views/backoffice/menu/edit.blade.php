@@ -9,7 +9,7 @@
         </div>
         <div class="card-body">
           {{ Html::ul($errors->all()) }}
-
+          
           {{ Form::model($menu, array('route' => array('menu.update', $menu->id), 'method' => 'PATCH')) }}
 
               @include('backoffice.menu.form')
