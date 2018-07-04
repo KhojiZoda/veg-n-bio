@@ -12,20 +12,35 @@
   </footer>
 
   <!-- Bootstrap and necessary plugins -->
-  {!! Html::script('vendor/js/jquery.min.js') !!}
-  {!! Html::script('vendor/js/popper.min.js') !!}
-  {!! Html::script('vendor/js/bootstrap.min.js') !!}
-  {!! Html::script('vendor/js/pace.min.js') !!}
-  {!! Html::script('vendor/DataTables/datatables.min.js') !!}
+  <script type="text/javascript" src="/vendor/js/jquery.min.js"></script>
+  {{-- {!! Html::script('vendor/js/jquery.min.js') !!} --}}
+  <script type="text/javascript" src="/vendor/js/popper.min.js"></script>
+  {{-- {!! Html::script('vendor/js/popper.min.js') !!} --}}
+  <script type="text/javascript" src="/vendor/js/bootstrap.min.js"></script>
+  {{-- {!! Html::script('vendor/js/bootstrap.min.js') !!} --}}
+  <script type="text/javascript" src="/vendor/js/pace.min.js"></script>
+  {{-- {!! Html::script('vendor/js/pace.min.js') !!} --}}
+  <script type="text/javascript" src="/vendor/DataTables/datatables.min.js"></script>
+  {{-- {!! Html::script('vendor/DataTables/datatables.min.js') !!} --}}
+  <script type="text/javascript" src="/vendor/js/Chart.min.js"></script>
   {{-- {!! Html::script('vendor/js/Chart.min.js') !!} --}}
-  {!! Html::script('js/back/app.js') !!}
-  {!! Html::script('vendor/js/toastr.min.js') !!}
-  {!! Html::script('vendor/js/gauge.min.js') !!}
-  {!! Html::script('vendor/js/moment.min.js') !!}
-  {!! Html::script('vendor/js/daterangepicker.min.js') !!}
-  {!! Html::script('js/back/views/main.js') !!}
-  {!! Html::script('ajax/admin.js') !!}
-  {!! Html::script('ajax/datatables.js') !!}
+  <script type="text/javascript" src="/js/back/app.js"></script>
+  {{-- {!! Html::script('js/back/app.js') !!} --}}
+  <script type="text/javascript" src="/vendor/js/toastr.min.js"></script>
+  {{-- {!! Html::script('vendor/js/toastr.min.js') !!} --}}
+  <script type="text/javascript" src="/vendor/js/gauge.min.js"></script>
+  {{-- {!! Html::script('vendor/js/gauge.min.js') !!} --}}
+  <script type="text/javascript" src="/vendor/js/moment.min.js"></script>
+  {{-- {!! Html::script('vendor/js/moment.min.js') !!} --}}
+  <script type="text/javascript" src="/vendor/js/daterangepicker.min.js"></script>
+  {{-- {!! Html::script('vendor/js/daterangepicker.min.js') !!} --}}
+  <script type="text/javascript" src="/js/back/views/main.js"></script>
+  {{-- {!! Html::script('js/back/views/main.js') !!} --}}
+  <script type="text/javascript" src="/ajax/admin.js"></script>
+  {{-- {!! Html::script('ajax/admin.js') !!} --}}
+  <script type="text/javascript" src="/ajax/datatables.js"></script>
+  {{-- {!! Html::script('ajax/datatables.js') !!} --}}
+
 
   </body>
 </html>

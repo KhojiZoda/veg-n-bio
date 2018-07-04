@@ -9,15 +9,24 @@
   <meta name="keyword" content="Vegan,restaurant,esgi">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Admin</title>
-  {!! Html::style('vendor/DataTables/datatables.min.css') !!}
-  {!! Html::style('vendor/css/flag-icon.min.css') !!}
-  {!! Html::style('vendor/css/font-awesome.min.css') !!}
-  {!! Html::style('vendor/css/simple-line-icons.min.css') !!}
-  {!! Html::style('css/style.css') !!}
-  {!! Html::style('css/shared.css') !!}
-  {!! Html::style('vendor/css/daterangepicker.min.css') !!}
-  {!! Html::style('vendor/css/gauge.min.css') !!}
-  {!! Html::style('vendor/css/toastr.min.css') !!}
+  <link rel="stylesheet" href="/vendor/DataTables/datatables.min.css">
+  {{-- {!! Html::style('vendor/DataTables/datatables.min.css') !!} --}}
+  <link rel="stylesheet" href="/vendor/css/flag-icon.min.css">
+  {{-- {!! Html::style('vendor/css/flag-icon.min.css') !!} --}}
+  <link rel="stylesheet" href="/vendor/css/font-awesome.min.css">
+  {{-- {!! Html::style('vendor/css/font-awesome.min.css') !!} --}}
+  <link rel="stylesheet" href="/vendor/css/simple-line-icons.min.css">
+  {{-- {!! Html::style('vendor/css/simple-line-icons.min.css') !!} --}}
+  <link rel="stylesheet" href="/css/style.css">
+  {{-- {!! Html::style('css/style.css') !!} --}}
+  <link rel="stylesheet" href="/css/shared.css">
+  {{-- {!! Html::style('css/shared.css') !!} --}}
+  <link rel="stylesheet" href="/vendor/css/daterangepicker.min.css">
+  {{-- {!! Html::style('vendor/css/daterangepicker.min.css') !!} --}}
+  <link rel="stylesheet" href="/vendor/css/gauge.min.css">
+  {{-- {!! Html::style('vendor/css/gauge.min.css') !!} --}}
+  <link rel="stylesheet" href="/vendor/css/toastr.min.css">
+  {{-- {!! Html::style('vendor/css/toastr.min.css') !!} --}}
 
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
