@@ -4,18 +4,18 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      {!! Html::style('vendor/bootstrap/css/bootstrap.min.css') !!}
-      {!! Html::style('fonts/font-awesome-4.7.0/css/font-awesome.min.css') !!}
-      {!! Html::style('fonts/themify/themify-icons.css') !!}
-      {!! Html::style('vendor/animate/animate.css') !!}
-      {!! Html::style('vendor/css-hamburgers/hamburgers.min.css') !!}
-      {!! Html::style('vendor/animsition/css/animsition.min.css') !!}
-      {!! Html::style('vendor/select2/select2.min.css') !!}
-      {!! Html::style('vendor/daterangepicker/daterangepicker.css') !!}
-      {!! Html::style('vendor/slick/slick.css') !!}
-      {!! Html::style('vendor/lightbox2/css/lightbox.min.css') !!}
-      {!! Html::style('css/util.css') !!}
-      {!! Html::style('css/main.css') !!}
+      {!! Html::style('vendor/bootstrap/css/bootstrap.min.css', array(), true) !!}
+      {!! Html::style('fonts/font-awesome-4.7.0/css/font-awesome.min.css', array(), true) !!}
+      {!! Html::style('fonts/themify/themify-icons.css', array(), true) !!}
+      {!! Html::style('vendor/animate/animate.css', array(), true) !!}
+      {!! Html::style('vendor/css-hamburgers/hamburgers.min.css', array(), true) !!}
+      {!! Html::style('vendor/animsition/css/animsition.min.css', array(), true) !!}
+      {!! Html::style('vendor/select2/select2.min.css', array(), true) !!}
+      {!! Html::style('vendor/daterangepicker/daterangepicker.css', array(), true) !!}
+      {!! Html::style('vendor/slick/slick.css', array(), true) !!}
+      {!! Html::style('vendor/lightbox2/css/lightbox.min.css', array(), true) !!}
+      {!! Html::style('css/util.css', array(), true) !!}
+      {!! Html::style('css/main.css', array(), true) !!}
   </head>
   <body class="animsition">
 
@@ -238,21 +238,21 @@
 
 
 
-    {!! Html::script('vendor/jquery/jquery-3.2.1.min.js') !!}
-    {!! Html::script('vendor/animsition/js/animsition.min.js') !!}
-    {!! Html::script('vendor/bootstrap/js/popper.js') !!}
-    {!! Html::script('vendor/bootstrap/js/bootstrap.min.js') !!}
-    {!! Html::script('vendor/select2/select2.min.js') !!}
-    {!! Html::script('vendor/daterangepicker/moment.min.js') !!}
-    {!! Html::script('vendor/daterangepicker/daterangepicker.js') !!}
-    {!! Html::script('vendor/slick/slick.min.js') !!}
-    {!! Html::script('js/slick-custom.js') !!}
-    {!! Html::script('vendor/parallax100/parallax100.js') !!}
+    {!! Html::script('vendor/jquery/jquery-3.2.1.min.js', array(), true) !!}
+    {!! Html::script('vendor/animsition/js/animsition.min.js', array(), true) !!}
+    {!! Html::script('vendor/bootstrap/js/popper.js', array(), true) !!}
+    {!! Html::script('vendor/bootstrap/js/bootstrap.min.js', array(), true) !!}
+    {!! Html::script('vendor/select2/select2.min.js', array(), true) !!}
+    {!! Html::script('vendor/daterangepicker/moment.min.js', array(), true) !!}
+    {!! Html::script('vendor/daterangepicker/daterangepicker.js', array(), true) !!}
+    {!! Html::script('vendor/slick/slick.min.js', array(), true) !!}
+    {!! Html::script('js/slick-custom.js', array(), true) !!}
+    {!! Html::script('vendor/parallax100/parallax100.js', array(), true) !!}
   	<script type="text/javascript">
           $('.parallax100').parallax100();
   	</script>
-    {!! Html::script('vendor/countdowntime/countdowntime.js') !!}
-    {!! Html::script('vendor/lightbox2/js/lightbox.min.js') !!}
-    {!! Html::script('js/main.js') !!}
+    {!! Html::script('vendor/countdowntime/countdowntime.js', array(), true) !!}
+    {!! Html::script('vendor/lightbox2/js/lightbox.min.js', array(), true) !!}
+    {!! Html::script('js/main.js', array(), true) !!}
   </body>
 </html>
