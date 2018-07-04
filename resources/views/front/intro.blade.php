@@ -17,7 +17,7 @@
   						<!-- Block1 -->
   						<div class="blo1">
   							<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-  								<a href="#"><img src="images/intro-01.jpg" alt="IMG-INTRO"></a>
+  								<a href="#"><img src="{{asset('/images/intro-01.jpg')}}" alt="IMG-INTRO"></a>
   							</div>
 
   							<div class="wrap-text-blo1 p-t-35">
@@ -41,7 +41,7 @@
   						<!-- Block1 -->
   						<div class="blo1">
   							<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-  								<a href="#"><img src="images/intro-02.jpg" alt="IMG-INTRO"></a>
+  								<a href="#"><img src="{{asset('/images/intro-02.jpg')}}" alt="IMG-INTRO"></a>
   							</div>
 
   							<div class="wrap-text-blo1 p-t-35">
@@ -65,7 +65,7 @@
   						<!-- Block1 -->
   						<div class="blo1">
   							<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-  								<a href="#"><img src="images/intro-04.jpg" alt="IMG-INTRO"></a>
+  								<a href="#"><img src="{{asset('/images/intro-04.jpg')}}" alt="IMG-INTRO"></a>
   							</div>
 
   							<div class="wrap-text-blo1 p-t-35">

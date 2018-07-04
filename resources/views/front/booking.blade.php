@@ -121,7 +121,7 @@
 
   				<div class="col-lg-6 p-b-30 p-t-18">
   					<div class="wrap-pic-booking size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-              {{ HTML::image('images/booking-01.jpg', 'IMG-OUR') }}
+              <img src="{{asset('/images/booking-01.jpg')}}" alt="IMG-OUR">
   					</div>
   				</div>
   			</div>

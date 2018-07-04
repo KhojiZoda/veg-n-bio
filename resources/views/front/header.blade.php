@@ -7,7 +7,8 @@
         <!-- Logo -->
         <div class="logo">
           <a href="index.html">
-            {{ HTML::image('images/icons/logo.png', 'GALLERY', array('data-logofixed' => 'images/icons/logo2.png')) }}
+            <img src="{{asset('/images/icons/logo.png')}}" alt="GALLERY" data-logofixed="{{asset('/images/icons/logo2.png')}}">
+            {{-- {{ HTML::image('images/icons/logo.png', 'GALLERY', array('data-logofixed' => 'images/icons/logo2.png')) }} --}}
           </a>
         </div>
 

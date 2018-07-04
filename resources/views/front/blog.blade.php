@@ -17,7 +17,7 @@
   					<div class="blo1">
   						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
   							<a href="blog-detail.html">
-                  {{ HTML::image('images/blog-01.jpg', 'IMG-INTRO') }}
+                  <img src="{{asset('/images/blog-01.jpg')}}" alt="IMG-INTRO">
                 </a>
 
   							<div class="time-blog">
@@ -47,7 +47,7 @@
   					<div class="blo1">
   						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
   							<a href="blog-detail.html">
-                  {{ HTML::image('images/blog-02.jpg', 'IMG-INTRO') }}
+                  <img src="{{asset('/images/blog-02.jpg')}}" alt="IMG-INTRO">
                 </a>
 
   							<div class="time-blog">
@@ -77,7 +77,7 @@
   					<div class="blo1">
   						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
   							<a href="blog-detail.html">
-                  {{ HTML::image('images/blog-03.jpg', 'IMG-INTRO') }}
+                  <img src="{{asset('/images/blog-03.jpg')}}" alt="IMG-INTRO">
                 </a>
 
   							<div class="time-blog">

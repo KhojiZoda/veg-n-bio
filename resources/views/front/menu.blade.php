@@ -17,7 +17,7 @@
   						<div class="col-sm-6">
   							<!-- Item our menu -->
   							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                  {{ HTML::image('images/our-menu-01.jpg', 'IMG-MENU') }}
+                  <img src="{{asset('/images/our-menu-01.jpg')}}" alt="IMG-MENU">
 
   								<!-- Button2 -->
   								<a href="#" class="btn2 flex-c-m txt5 ab-c-m size4">
@@ -29,7 +29,7 @@
   						<div class="col-sm-6">
   							<!-- Item our menu -->
   							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                  {{ HTML::image('images/our-menu-05.jpg', 'IMG-MENU') }}
+                  <img src="{{asset('/images/our-menu-05.jpg')}}" alt="IMG-MENU">
 
   								<!-- Button2 -->
   								<a href="#" class="btn2 flex-c-m txt5 ab-c-m size5">
@@ -41,7 +41,7 @@
   						<div class="col-12">
   							<!-- Item our menu -->
   							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                  {{ HTML::image('images/our-menu-13.jpg', 'IMG-MENU') }}
+                  <img src="{{asset('/images/our-menu-13.jpg')}}" alt="IMG-MENU">
 
   								<!-- Button2 -->
   								<a href="#" class="btn2 flex-c-m txt5 ab-c-m size6">
@@ -57,7 +57,7 @@
   						<div class="col-12">
   							<!-- Item our menu -->
   							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                  {{ HTML::image('images/our-menu-08.jpg', 'IMG-MENU') }}
+                  <img src="{{asset('/images/our-menu-08.jpg')}}" alt="IMG-MENU">
 
   								<!-- Button2 -->
   								<a href="#" class="btn2 flex-c-m txt5 ab-c-m size7">
@@ -69,7 +69,7 @@
   						<div class="col-12">
   							<!-- Item our menu -->
   							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                  {{ HTML::image('images/our-menu-10.jpg', 'IMG-MENU') }}
+                  <img src="{{asset('/images/our-menu-10.jpg')}}" alt="IMG-MENU">
 
   								<!-- Button2 -->
   								<a href="#" class="btn2 flex-c-m txt5 ab-c-m size8">
@@ -81,7 +81,7 @@
   						<div class="col-12">
   							<!-- Item our menu -->
   							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                  {{ HTML::image('images/our-menu-16.jpg', 'IMG-MENU') }}
+                  <img src="{{asset('/images/our-menu-16.jpg')}}" alt="IMG-MENU">
 
   								<!-- Button2 -->
   								<a href="#" class="btn2 flex-c-m txt5 ab-c-m size9">

@@ -4,18 +4,30 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      {!! Html::style('vendor/bootstrap/css/bootstrap.min.css', array(), true) !!}
-      {!! Html::style('fonts/font-awesome-4.7.0/css/font-awesome.min.css', array(), true) !!}
-      {!! Html::style('fonts/themify/themify-icons.css', array(), true) !!}
-      {!! Html::style('vendor/animate/animate.css', array(), true) !!}
-      {!! Html::style('vendor/css-hamburgers/hamburgers.min.css', array(), true) !!}
-      {!! Html::style('vendor/animsition/css/animsition.min.css', array(), true) !!}
-      {!! Html::style('vendor/select2/select2.min.css', array(), true) !!}
-      {!! Html::style('vendor/daterangepicker/daterangepicker.css', array(), true) !!}
-      {!! Html::style('vendor/slick/slick.css', array(), true) !!}
-      {!! Html::style('vendor/lightbox2/css/lightbox.min.css', array(), true) !!}
-      {!! Html::style('css/util.css', array(), true) !!}
-      {!! Html::style('css/main.css', array(), true) !!}
+      <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+      {{-- {!! Html::style('vendor/bootstrap/css/bootstrap.min.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+      {{-- {!! Html::style('fonts/font-awesome-4.7.0/css/font-awesome.min.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/fonts/themify/themify-icons.css">
+      {{-- {!! Html::style('fonts/themify/themify-icons.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/vendor/animate/animate.css">
+      {{-- {!! Html::style('vendor/animate/animate.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/vendor/css-hamburgers/hamburgers.min.css">
+      {{-- {!! Html::style('vendor/css-hamburgers/hamburgers.min.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/vendor/animsition/css/animsition.min.css">
+      {{-- {!! Html::style('vendor/animsition/css/animsition.min.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/vendor/select2/select2.min.css">
+      {{-- {!! Html::style('vendor/select2/select2.min.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/vendor/daterangepicker/daterangepicker.css">
+      {{-- {!! Html::style('vendor/daterangepicker/daterangepicker.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/vendor/slick/slick.css">
+      {{-- {!! Html::style('vendor/slick/slick.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/vendor/lightbox2/css/lightbox.min.css">
+      {{-- {!! Html::style('vendor/lightbox2/css/lightbox.min.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/css/util.css">
+      {{-- {!! Html::style('css/util.css', array(), true) !!} --}}
+      <link rel="stylesheet" href="/css/main.css">
+      {{-- {!! Html::style('css/main.css', array(), true) !!} --}}
   </head>
   <body class="animsition">
 
@@ -156,51 +168,52 @@
   					<!-- Gallery footer -->
   					<div class="wrap-gallery-footer flex-w">
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-01.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-01.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-01.jpg')}}" alt="GALLERY">
+                {{-- {{ HTML::image('images/photo-gallery-thumb-01.jpg', 'GALLERY') }} --}}
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-02.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-02.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-02.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-03.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-03.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-03.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-04.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-04.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-04.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-05.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-05.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-05.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-06.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-06.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-06.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-07.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-07.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-07.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-08.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-08.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-08.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-09.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-09.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-09.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-10.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-10.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-10.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-11.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-11.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-11.jpg')}}" alt="GALLERY">
   						</a>
 
   						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-12.jpg" data-lightbox="gallery-footer">
-                {{ HTML::image('images/photo-gallery-thumb-12.jpg', 'GALLERY') }}
+                <img src="{{asset('/images/photo-gallery-thumb-12.jpg')}}" alt="GALLERY">
   						</a>
   					</div>
 
@@ -237,22 +250,34 @@
   	<div id="dropDownSelect1"></div>
 
 
-
-    {!! Html::script('vendor/jquery/jquery-3.2.1.min.js', array(), true) !!}
-    {!! Html::script('vendor/animsition/js/animsition.min.js', array(), true) !!}
-    {!! Html::script('vendor/bootstrap/js/popper.js', array(), true) !!}
-    {!! Html::script('vendor/bootstrap/js/bootstrap.min.js', array(), true) !!}
-    {!! Html::script('vendor/select2/select2.min.js', array(), true) !!}
-    {!! Html::script('vendor/daterangepicker/moment.min.js', array(), true) !!}
-    {!! Html::script('vendor/daterangepicker/daterangepicker.js', array(), true) !!}
-    {!! Html::script('vendor/slick/slick.min.js', array(), true) !!}
-    {!! Html::script('js/slick-custom.js', array(), true) !!}
-    {!! Html::script('vendor/parallax100/parallax100.js', array(), true) !!}
+    <script type="text/javascript" src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+    {{-- {!! Html::script('vendor/jquery/jquery-3.2.1.min.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/animsition/js/animsition.min.js"></script>
+    {{-- {!! Html::script('vendor/animsition/js/animsition.min.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/bootstrap/js/popper.js"></script>
+    {{-- {!! Html::script('vendor/bootstrap/js/popper.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    {{-- {!! Html::script('vendor/bootstrap/js/bootstrap.min.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/select2/select2.min.js"></script>
+    {{-- {!! Html::script('vendor/select2/select2.min.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/daterangepicker/moment.min.js"></script>
+    {{-- {!! Html::script('vendor/daterangepicker/moment.min.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/daterangepicker/daterangepicker.js"></script>
+    {{-- {!! Html::script('vendor/daterangepicker/daterangepicker.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/slick/slick.min.js"></script>
+    {{-- {!! Html::script('vendor/slick/slick.min.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/js/slick-custom.js"></script>
+    {{-- {!! Html::script('js/slick-custom.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/parallax100/parallax100.js"></script>
+    {{-- {!! Html::script('vendor/parallax100/parallax100.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/countdowntime/countdowntime.js"></script>
   	<script type="text/javascript">
           $('.parallax100').parallax100();
   	</script>
-    {!! Html::script('vendor/countdowntime/countdowntime.js', array(), true) !!}
-    {!! Html::script('vendor/lightbox2/js/lightbox.min.js', array(), true) !!}
-    {!! Html::script('js/main.js', array(), true) !!}
+    {{-- {!! Html::script('vendor/countdowntime/countdowntime.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/vendor/lightbox2/js/lightbox.min.js"></script>
+    {{-- {!! Html::script('vendor/lightbox2/js/lightbox.min.js', array(), true) !!} --}}
+    <script type="text/javascript" src="/js/main.js"></script>
+    {{-- {!! Html::script('js/main.js', array(), true) !!} --}}
   </body>
 </html>
