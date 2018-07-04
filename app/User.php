@@ -9,13 +9,24 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function restaurant(){
+      return $this->belongsTo('App\Restaurant');
+    }
+
+    public function orders(){
+      return $this->hasMany('App\Order');
+    }
+    public function ingredients(){
+      return $this->hasMany('App\Ingredient');
+    }
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'email', 'password',
+        'address', 'gender', 'birthday', 'status', 'role'
     ];
 
     /**
