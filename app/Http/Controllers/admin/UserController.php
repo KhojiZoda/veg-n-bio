@@ -28,31 +28,6 @@ class UserController extends Controller{
   }
 
   public function update($user_id){
-      // $user = User::find($user_id);
-      // $user->validate(request(), [
-      //   'first_name' => 'required|string|max:255',
-      //   'last_name' => 'required|string|max:255',
-      //   'email' => 'required|string|email|max:255|unique:users',
-      //   'password' => 'required|string|min:6|confirmed',
-      //   'birthday' => 'required|date',
-      //   'gender' => 'required|string',
-      //   'address' => 'required|string|max:255',
-      //   'role' => 'required|string|max:255',
-      // ]);
-      //
-      // $user->first_name = request('first_name');
-      // $user->last_name = request('last_name')
-      // $user->email = request('email');
-      // $user->password = bcrypt(request('password'));
-      // $user->birthday = request('birthday');
-      // $user->gender = request('gender');
-      // $user->address = request('address');
-      // $user->role = request('role');
-      //
-      // $user->save();
-      //
-      // return back();
-
       $rules = array(
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',

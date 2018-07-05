@@ -26,7 +26,8 @@ class RestaurantController extends Controller
       return Validator::make($data, [
           'name' => 'required',
           'address' => 'required',
-          'menu_id' => 'integer'
+          'menu_id' => 'integer',
+          'nb_places' => 'required|integer'
       ]);
   }
 
@@ -35,7 +36,8 @@ class RestaurantController extends Controller
     $rules = array(
       'name'    => 'required',
       'address' => 'required',
-      'menu_id' => 'required'
+      'menu_id' => 'required',
+      'nb_places' => 'required'
     );
 
     $validator = Validator::make(Input::all(), $rules);
@@ -50,6 +52,7 @@ class RestaurantController extends Controller
       $restaurant->name        = Input::get('name');
       $restaurant->address     = Input::get('address');
       $restaurant->menu_id     = Input::get('menu_id');
+      $restaurant->nb_places   = Input::get('nb_places');
       $restaurant->save();
 
       // redirect
@@ -85,7 +88,8 @@ class RestaurantController extends Controller
     $rules = array(
       'name'    => 'required',
       'address' => 'required',
-      'menu_id' => 'required'
+      'menu_id' => 'required',
+      'nb_places' => 'required'
     );
 
     $validator = Validator::make(Input::all(), $rules);
@@ -98,6 +102,7 @@ class RestaurantController extends Controller
       $restaurant->name        = Input::get('name');
       $restaurant->address     = Input::get('address');
       $restaurant->menu_id     = Input::get('menu_id');
+      $restaurant->nb_places   = Input::get('nb_places');
       $restaurant->save();
 
       // redirect

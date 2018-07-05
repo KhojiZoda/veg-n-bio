@@ -49,25 +49,6 @@
 
     @include("front.blog")
 
-  	<!-- Sign up -->
-  	<div class="section-signup bg1-pattern p-t-85 p-b-85">
-  		<form class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
-  			<span class="txt5 m-10">
-  				Specials Sign up
-  			</span>
-
-  			<div class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
-  				<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email-address" placeholder="Email Adrress">
-  				<i class="fa fa-envelope ab-r-m m-r-18" aria-hidden="true"></i>
-  			</div>
-
-  			<!-- Button3 -->
-  			<button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10">
-  				Sign-up
-  			</button>
-  		</form>
-  	</div>
-
 
   	<!-- Footer -->
   	<footer class="bg1">
@@ -110,53 +91,6 @@
   							Every Day
   						</li>
   					</ul>
-  				</div>
-
-  				<div class="col-sm-6 col-md-4 p-t-50">
-  					<!-- - -->
-  					<h4 class="txt13 m-b-33">
-  						Latest twitter
-  					</h4>
-
-  					<div class="m-b-25">
-  						<span class="fs-13 color2 m-r-5">
-  							<i class="fa fa-twitter" aria-hidden="true"></i>
-  						</span>
-  						<a href="#" class="txt15">
-  							@colorlib
-  						</a>
-
-  						<p class="txt14 m-b-18">
-  							Activello is a good option. It has a slider built into that displays the featured image in the slider.
-  							<a href="#" class="txt15">
-  								https://buff.ly/2zaSfAQ
-  							</a>
-  						</p>
-
-  						<span class="txt16">
-  							21 Dec 2017
-  						</span>
-  					</div>
-
-  					<div>
-  						<span class="fs-13 color2 m-r-5">
-  							<i class="fa fa-twitter" aria-hidden="true"></i>
-  						</span>
-  						<a href="#" class="txt15">
-  							@colorlib
-  						</a>
-
-  						<p class="txt14 m-b-18">
-  							Activello is a good option. It has a slider built into that displays
-  							<a href="#" class="txt15">
-  								https://buff.ly/2zaSfAQ
-  							</a>
-  						</p>
-
-  						<span class="txt16">
-  							21 Dec 2017
-  						</span>
-  					</div>
   				</div>
 
   				<div class="col-sm-6 col-md-4 p-t-50">

@@ -12,6 +12,7 @@
             <thead>
               <tr>
                 <th>Nom</th>
+                <th>Prix (en €)</th>
                 <th>Type</th>
                 <th>Action</th>
               </tr>
@@ -20,9 +21,10 @@
             </tbody>
             <tfoot>
               <tr>
-                  <th>#</th>
-                  <th>Type</th>
-                  <th></th>
+                <th>Nom</th>
+                <th>Prix (en €)</th>
+                <th>Type</th>
+                <th></th>
               </tr>
           </tfoot>
           </table>

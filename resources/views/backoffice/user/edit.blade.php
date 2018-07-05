@@ -60,7 +60,7 @@
                      'admin' => 'Administrateur',
                      'employee' => 'Salarié',
                      'provider' => 'Fournisseur'],
-                     $errors->has('role') ? ['class'=>"custom-select is-invalid"] : ['class'=>"custom-select"]
+                     $errors->has('role') ? ['class'=>"custom-select is-invalid form-control"] : ['class'=>"custom-select form-control"]
                   ) }}
               </div>
 

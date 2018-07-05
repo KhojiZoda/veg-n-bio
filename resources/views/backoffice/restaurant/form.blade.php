@@ -8,6 +8,11 @@
 </div>
 
 <div class="form-group">
+    {{ Form::label('nb_places', 'Nombre de places') }}
+    {{ Form::number('nb_places', Input::old('nb_places'), array('class' => 'form-control')) }}
+</div>
+
+<div class="form-group">
     {{ Form::label('menu_id', 'Menu') }}
     <select name="menu_id" class="form-control">
       @foreach ($menus as $menu)

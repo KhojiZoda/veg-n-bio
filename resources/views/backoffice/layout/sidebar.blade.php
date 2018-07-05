@@ -56,10 +56,10 @@
           <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Plats</a>
           <ul class="nav-dropdown-items">
             <li class="nav-item">
-              <a class="nav-link" href="/admin/meals/new"><i class="icon-puzzle"></i> Ajouter un plat</a>
+              <a class="nav-link" href="/admin/meal/new"><i class="icon-puzzle"></i> Ajouter un plat</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/meals"><i class="icon-puzzle"></i> Liste des plats</a>
+              <a class="nav-link" href="/admin/meal"><i class="icon-puzzle"></i> Liste des plats</a>
             </li>
           </ul>
         </li>
@@ -76,6 +76,9 @@
         </li>
         <li class="nav-item nav-dropdown">
           <a class="nav-link" href="/admin/marketplace"><i class="icon-puzzle"></i> Place de marché</a>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a class="nav-link" href="/reservation/index"><i class="icon-puzzle"></i> Reservations</a>
         </li>
       </ul>
     @endif

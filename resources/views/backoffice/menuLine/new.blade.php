@@ -21,15 +21,17 @@
               <div id="order_lines_row">
                 <div class="order_lines">
                   <div class="form-group">
-                    {{ Form::label('menu_id', '') }}
-                    {{ Form::text('menu_id', $menu_id, array('class' => 'form-control', 'readonly' => 'true')) }}
-
                     {{ Form::label('meals', '') }}
-                    <select name="meals">
+                    <select name="meals" class="form-control">
                       @foreach ($meals as $meal)
                         <option value="{{$meal->id}}">{{$meal->name}}</option>
                       @endforeach
                     </select>
+                    <div class="unabled">
+                      {{ Form::label('menu_id', '') }}
+                      {{ Form::text('menu_id', $menu_id, array('class' => 'form-control', 'readonly' => 'true')) }}
+                    </div>
+
                   </div>
                 </div>
               </div>

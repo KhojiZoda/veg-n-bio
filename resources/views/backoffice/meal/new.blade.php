@@ -13,7 +13,7 @@
 
           {{ Form::open(array('route' => 'meal.create')) }}
 
-              @include('backoffice.menu.form')
+              @include('backoffice.meal.form')
 
               {{ Form::submit('Soumettre', array('class' => 'btn btn-outline-primary')) }}
 

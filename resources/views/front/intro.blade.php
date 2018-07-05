@@ -29,10 +29,7 @@
   									Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
   								</p>
 
-  								<a href="#" class="txt4">
-  									Learn More
-  									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-  								</a>
+
   							</div>
   						</div>
   					</div>
@@ -53,10 +50,7 @@
   									Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh urna
   								</p>
 
-  								<a href="#" class="txt4">
-  									Learn More
-  									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-  								</a>
+
   							</div>
   						</div>
   					</div>
@@ -77,10 +71,7 @@
   									Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
   								</p>
 
-  								<a href="#" class="txt4">
-  									Learn More
-  									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-  								</a>
+  								
   							</div>
   						</div>
   					</div>

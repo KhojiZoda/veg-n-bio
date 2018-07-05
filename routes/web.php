@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function () {
-    return view('front/application-front');
+    return view('front/layout/welcome');
 });
 
 // Authentication Routes...
@@ -79,11 +79,18 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
   Route::post('meal/create',                      'MealController@create')        ->name('meal.create');
   Route::patch('meal/{meal_id}/update',           'MealController@update')        ->name('meal.update');
   Route::get('meal/{meal_id}',                    'MealController@show')          ->name('meal.show');
+  Route::post('meal/{meal_id}/delete',           'MealController@delete')        ->name('meal.delete');
+
 
   Route::get('buyhistory',                                                    'BuyHistoryController@index')             ->name('history.index');
   Route::get('buyhistory/new/ingredient/{ingredient_id}',                     'BuyHistoryController@new')               ->name('history.new');
   Route::post('buyhistory/create/ingredient/{ingredient_id}',                 'BuyHistoryController@create')            ->name('history.create');
   Route::get('buyhistory/{buyhistory_id}',                                    'BuyHistoryController@show')              ->name('history.show');
+
+  Route::get('mealIngredients/',                                  'MealIngredientsController@index')    ->name("mealIngredients.index");
+  Route::get('/meal/{meal_id}/mealIngredients/new',               'MealIngredientsController@new')      ->name('mealIngredients.new');
+  Route::post('mealIngredients/create',                           'MealIngredientsController@create')   ->name("mealIngredients.create");
+  Route::post('mealIngredients/{mealIngredients_id}/delete',      'MealIngredientsController@delete')   ->name("mealIngredients.delete");
 
   Route::get('marketplace',                       'MarketplaceController@index')  ->name('marketplace.index');
 
@@ -96,6 +103,10 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'middleware' => ['aut
   Route::get('datatables/getProviders', 'DataLoadingsController@getProviders')   ->name("dataLoadings.providers");
   Route::get('datatables/getIngredients', 'DataLoadingsController@getIngredients') ->name('dataLoadings.ingredients');
   Route::get('datatables/getHistory', 'DataLoadingsController@getHistory') ->name('dataLoadings.history');
+  Route::get('datatables/getMeals', 'DataLoadingsController@getMeals') ->name('dataLoadings.meals');
+
+
+  Route::get('datatables/getReservations', 'DataLoadingsController@getReservations') ->name('dataLoadings.reservations');
 
 });
 
@@ -105,3 +116,10 @@ Route::post('provider/{provider_id}/ingredient/create', 'ProviderController@crea
 Route::patch('provider/{provider_id}/ingredient/{ingredient_id}/update', 'ProviderController@update') ->name('provider.update');
 Route::get('provider/{provider_id}/ingredient/{ingredient_id}/edit', 'ProviderController@edit') ->name('provider.edit');
 Route::get('provider/providerIngredients/{provider_id}', 'ProviderController@providerIngredients')  ->name("provider.providerIngredients");
+
+
+Route::get('reservation/new',   'ReservationController@new') ->name('reservation.new');
+Route::get('reservation/index',   'ReservationController@index') ->name('reservation.index');
+Route::post('reservation/create',   'ReservationController@create') ->name('reservation.create');
+Route::get('restaurants/', 'FrontController@restaurants')   ->name('front.restaurants');
+Route::get('restaurants/{restaurant_id}/menu/{menu_id}', 'FrontController@menu')   ->name('front.restaurant.menu');

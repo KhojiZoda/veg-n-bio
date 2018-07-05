@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Meal;
-
+use App\MealIngredients;
+use App\BuyHistory;
 class MealController extends Controller
 {
   public function __construct(){
@@ -41,19 +42,45 @@ class MealController extends Controller
           ->withErrors($validator);
     } else {
       // store
-      $meal = new Order;
+      $meal = new Meal;
       $meal->name     = Input::get('name');
       $meal->type     = Input::get('type');
       $meal->price    = Input::get('price');
       $meal->save();
 
       // redirect
-      return redirect()->route('meal.new', $meal->id)->with('order_id', $meal);
+      return redirect()->route('meal.show', $meal->id);
     }
 
   }
 
   public function new(){
     return view('backoffice.meal.new');
+  }
+
+  public function index(){
+    return view('backoffice.meal.index');
+  }
+
+  public function show($meal_id){
+    $meal = Meal::find($meal_id);
+    $ingredients_all = BuyHistory::with('ingredient')->get();
+    $ingredients = MealIngredients::with('ingredient')->where('meal_id', $meal_id)->get();
+    return view('backoffice.meal.show')->with('meal', $meal)->with('ingredients', $ingredients)->with('ingredients_all', $ingredients_all);
+  }
+
+  public function delete(){
+    $meal = Meal::find(Input::get("meal_id"));
+    if ($meal->delete()) {
+      return $data = array(
+        'status' => 'success',
+        'msg' => 'Le plat a été supprimé'
+      );
+    }else{
+      return $data = array(
+        'status' => 'error',
+        'msg' => 'Une erreur est survenu'
+      );
+    }
   }
 }

@@ -87,3 +87,24 @@ function showPrice(price,quantity){
     $('#error_ing').fadeOut();
   }
 }
+
+function deleteMeal(mealId){
+  $.ajax({
+    type: 'POST',
+    url: '/admin/meal/' + mealId + '/delete',
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+    data: {
+      meal_id: mealId
+    },
+    success:function(data){
+      window.location.reload();
+      toastr.success(data.msg);
+    },
+    error:function(response){
+      console.log(response);
+      toastr.error(response.msg);
+    },
+  });
+}

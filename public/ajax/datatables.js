@@ -61,8 +61,9 @@ $(document).ready(function(){
         "type": "GET"
       },
       "columns": [
-        { "data": "id" },
         { "data": "meal.name" },
+        { "data": "meal.price" },
+        { "data": "meal.type" },
         {
           "data": "id",
           "searchable": false,
@@ -333,6 +334,94 @@ $(document).ready(function(){
 
         // DataTable
         var table = $('#provider_ingredients_index_tab').DataTable();
+
+        // Apply the search
+        table.columns().every( function () {
+          var that = this;
+          $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+              that.search( this.value ).draw();
+            }
+          });
+        });
+      }
+    });
+  }
+});
+
+
+$(document).ready(function(){
+  var meals = $('#meals_table_id');
+  if (meals[0]){
+    $("table#meals_table_id").dataTable({
+      "language": {
+        "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/French.json"
+      },
+      "ajax": {
+        "url": "/admin/datatables/getMeals",
+        "type": "GET"
+      },
+      "columns": [
+        { "data": "name" },
+        { "data": "price" },
+        { "data": "type" },
+        {
+          "data": "id",
+          "searchable": false,
+          "orderable": false,
+          "render": function(data, type, row) {
+            return "<button onClick='deleteMeal(" + data + ")'' class='btn btn-outline-danger'><i class='fa fa-times' aria-hidden='true'></i></button>"
+          }
+        }
+      ],
+      "initComplete": function(){
+        $('#meals_table_id tfoot th').each( function () {
+          var title = $(this).text();
+          $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
+        });
+
+        // DataTable
+        var table = $('#meals_table_id').DataTable();
+
+        // Apply the search
+        table.columns().every( function () {
+          var that = this;
+          $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+              that.search( this.value ).draw();
+            }
+          });
+        });
+      }
+    });
+  }
+});
+
+$(document).ready(function(){
+  var meals = $('#reservation_table');
+  if (meals[0]){
+    $("table#reservation_table").dataTable({
+      "language": {
+        "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/French.json"
+      },
+      "ajax": {
+        "url": "/admin/datatables/getReservations",
+        "type": "GET"
+      },
+      "columns": [
+        { "data": "name" },
+        { "data": "price" },
+        { "data": "type" },
+
+      ],
+      "initComplete": function(){
+        $('#reservation_table tfoot th').each( function () {
+          var title = $(this).text();
+          $(this).html( '<input type="text" placeholder="Recherche '+title+'" />' );
+        });
+
+        // DataTable
+        var table = $('#reservation_table').DataTable();
 
         // Apply the search
         table.columns().every( function () {

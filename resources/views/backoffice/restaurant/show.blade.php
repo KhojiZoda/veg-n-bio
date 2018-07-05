@@ -13,6 +13,8 @@
             <dd class="col-md-6">{{$restaurant->name}}</dd>
             <dt class="col-md-6">Adresse</dt>
             <dd class="col-md-6">{{$restaurant->address}}</dd>
+            <dt class="col-md-6">Nombre de places</dt>
+            <dd class="col-md-6">{{$restaurant->nb_places}}</dd>
             <dt class="col-md-6">Menu</dt>
             <dd class="col-md-6">
               <a href="/admin/menu/{{$menu->id}}">{{$menu->name}}</a>

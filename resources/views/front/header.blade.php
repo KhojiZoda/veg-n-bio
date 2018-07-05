@@ -6,7 +6,7 @@
       <div class="wrap_header trans-0-3">
         <!-- Logo -->
         <div class="logo">
-          <a href="index.html">
+          <a href="/">
             <img src="{{asset('/images/icons/logo.png')}}" alt="GALLERY" data-logofixed="{{asset('/images/icons/logo2.png')}}">
             {{-- {{ HTML::image('images/icons/logo.png', 'GALLERY', array('data-logofixed' => 'images/icons/logo2.png')) }} --}}
           </a>
@@ -21,23 +21,15 @@
               </li>
 
               <li>
-                <a href="menu.html">Menu</a>
+                <a href="/restaurants">Menu</a>
               </li>
 
               <li>
-                <a href="reservation.html">Reservation</a>
-              </li>
-
-              <li>
-                <a href="gallery.html">Gallery</a>
+                <a href="/reservation/new">Reservation</a>
               </li>
 
               <li>
                 <a href="about.html">About</a>
-              </li>
-
-              <li>
-                <a href="blog.html">Blog</a>
               </li>
 
               <li>
