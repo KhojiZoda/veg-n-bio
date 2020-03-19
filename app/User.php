@@ -16,6 +16,9 @@ class User extends Authenticatable
     public function orders(){
       return $this->hasMany('App\Order');
     }
+    public function ingredients(){
+      return $this->hasMany('App\Ingredient');
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -23,8 +26,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'first_name', 'last_name', 'email', 'password',
-        'address', 'gender', 'birthday', 'status', 'role',
-        'restaurant_id'
+        'address', 'gender', 'birthday', 'status', 'role'
     ];
 
     /**

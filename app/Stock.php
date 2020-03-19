@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stock extends Model
 {
-    public function ingridient(){
-      return $this -> belongsTo('App\Ingridient');
+    public function ingredient(){
+      return $this -> belongsTo('App\Ingredient');
     }
 }

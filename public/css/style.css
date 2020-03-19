@@ -615,6 +615,10 @@ pre {
       flex: 0 0 100%;
   max-width: 100%; }
 
+  .order_id{
+    visibility: hidden;
+  }
+
 .order-first {
   -ms-flex-order: -1;
       order: -1; }
